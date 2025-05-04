@@ -1,33 +1,25 @@
 Ackermann Function with Memoization in Racket
 
 This project demonstrates the implementation of the Ackermann function in Racket (#lang racket) using both a standard recursive approach and a memoized (cached) version to optimize repeated function calls. It also showcases basic use of functional constructs and closures in Racket.
-🧠 What the Code Does
 
-    Ackermann Function (ackermann)
+What the Code Does:
 
-        A classic example of a deeply recursive function.
+Ackermann Function (ackermann):
+-A classic example of a deeply recursive function.
+-Very computationally intensive even for small inputs.
+-Written using a pure recursive definition.
 
-        Very computationally intensive even for small inputs.
+Memoization with Global State (ackermann_mem):
+-Introduces a global association list al to store previously computed results.
+-Uses bind and lookup functions to manage key-value pairs.
+-Reuses results if the same arguments are passed again (memoization hit).
 
-        Written using a pure recursive definition.
+Functional Memoization (construct_mem)
+-A more functional and encapsulated approach.
+-construct_mem is a higher-order function that takes any two-argument function and returns a memoized version of it.
+-Demonstrates use of closures to keep internal state private.
 
-    Memoization with Global State (ackermann_mem)
-
-        Introduces a global association list al to store previously computed results.
-
-        Uses bind and lookup functions to manage key-value pairs.
-
-        Reuses results if the same arguments are passed again (memoization hit).
-
-    Functional Memoization (construct_mem)
-
-        A more functional and encapsulated approach.
-
-        construct_mem is a higher-order function that takes any two-argument function and returns a memoized version of it.
-
-        Demonstrates use of closures to keep internal state private.
-
-🧪 Tests
+Tests
 
 The code includes two sets of tests:
 
